@@ -1,0 +1,29 @@
+     A* Licensing terms.
+     A* This is free software; you can redistribute it and/or
+     A* modify it under the terms of the GNU General Public License as published
+     A* by the Free Software Foundation; either version 3 of the License, or
+     A* (at your option) any later version.
+     A*
+     A* It is distributed in the hope that it will be useful,
+     A* but WITHOUT ANY WARRANTY; without even the implied warranty of
+     A* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     A* GNU General Public License for more details.
+     A*
+     A* You should have received a copy of the GNU General Public License
+     A* along with this; if not, write to the Free Software
+     A* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+     A* or get it at http://www.gnu.org/licenses/gpl.html
+     A*
+     A* Globals ----------------------------------------------------------------
+     A*
+     A* Record Format Name -----------------------------------------------------
+     A          R COMVALTBL
+     A* Data fields
+     A            D_STAMP         Z
+     A            D_PORT         2S 0
+     A            D_WATT         4S 0
+     A* Index field(s)
+     A          K D_PORT
+     A          K D_STAMP
+     A* For vim ----------------------------------------------------------------
+     A* vim: syntax=dds colorcolumn=81 autoindent noignorecase
