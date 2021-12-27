@@ -79,9 +79,9 @@ Now you can start the subsystem with `STRSBS SBSD(HAUSAUTO)`. You should see
 the jobs run in WRKACTJOB:
 ```
 Opt   Subsystem/Job  User        Type CPU %  Function        Status
-      HAUSTASKS      QSYS        SBS    0,0                   DEQW 
-        COMCPYRCD    HAUSAUTO    ASJ    0,0  PGM-COMCPYRCD    RUN  
-        COMRECV      HAUSAUTO    ASJ    0,0  PGM-COMRECV      RUN  
+ __   HAUSTASKS      QSYS        SBS    0,0                   DEQW 
+ __     COMCPYRCD    HAUSAUTO    ASJ    0,0  PGM-COMCPYRCD    RUN  
+ __     COMRECV      HAUSAUTO    ASJ    0,0  PGM-COMRECV      RUN  
 ```
 
 After no more than one minute has passed, you should be able to see records in
