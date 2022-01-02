@@ -40,10 +40,10 @@ People say, a picture tells more than a thousand words. They might be right.
 Since I'm a German resident, products I use are probably not available in other
 countries.
 ```
-                             +--------+ Temperature
+                             +--------+ Temperature sensor,
   Switches:       +----------+ Boiler +-------------------+
-  Eltako ER12-001 |          +--------+ sensor            |
-                  |                                       |
+  Eltako ER12-001 |          +--------+ Phase controlled  |
+                  |                     modulator         |
                   |          +--------------+             |
                   | +--------+ Garden Light |             |
                   | |        +--------------+             |
