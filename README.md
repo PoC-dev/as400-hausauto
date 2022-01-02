@@ -40,39 +40,53 @@ People say, a picture tells more than a thousand words. They might be right.
 Since I'm a German resident, products I use are probably not available in other
 countries.
 ```
-+---------------------+
-| Eltako DSZ12D-3x65A | House Consumption
-| Power Meter         | 1000 Imp/kWh
-+---------------------+
-  |
-  | +---------------------+
-  | | Eltako DSZ12D-3x65A | Solar Power
-  | | Power Meter         | 1000 Imp/kWh
-  | +---------------------+
-  |  |          (In)
-+---------------+
-| W&T COMServer |
-|     50210     |      Switches:
-+-----+---+-+-+-+      Eltako ER12-001
-      |   | | | (Out)  +--------+
-      |   | | +--------+ Boiler |
-      |   | |          +--------+
-      |   | |          
-      |   | |          +--------------+
-      |   | +----------+ Garden Light |
-      |   |            +--------------+
-      |   |            
-      |   |            +-----------------+  +-----------------------+
-      |   +------------+ Staircase Light |  | EDS OW Server v2 Enet |
-      |                +-----------------+  +------------+----------+
-|     |                                                  |                    |
-+-----+-------+---------------------+--------------+-----+--------------------+
-|             |                     |              |                      LAN |
-              |                     |              |
-   +----------+---------+  +--------+-------+  +---+----+
-   | SMA Sunny Tripower |  | SMA Sunny Home |  | AS/400 | 
-   | 5000TL-20          |  | Manager 2.0    |  +--------+
-   +--------------------+  +----------------+
+                             +--------+ Temperature
+  Switches:       +----------+ Boiler +-------------------+
+  Eltako ER12-001 |          +--------+ sensor            |
+                  |                                       |
+                  |          +--------------+             |
+                  | +--------+ Garden Light |             |
+                  | |        +--------------+             |
+                  | |                                     |
+                  | |        +-----------------+          |
+                  | | +------+ Staircase Light |          |
++-------------+   | | |      +-----------------+          |
+|             |   | | |                                   |
+|  +--------+ |   | | |                                   |
+|  |   (In) | |   | | | (Out)                             | 1w-Bus
+|  |     +--+-+---+-+-+--+         +--------+     +-------+-------+
+|  |     | W&T COMServer |         |  IBM   |     | EDS OW Server |
+|  |     |     50210     |         | AS/400 |     | v2 Enet       |
+|  |     +--+------------+         +----+---+     +-------+-------+
+|  |        |                           |                 |
+|  |  |     |                           |                 |          |
+|  |  +=====+=====+=====================+=================+===+======+
+|  |  |           |                                           |  LAN |
+|  +--------------|----------------+ House Consumption        |
+|                 |            (S0)| 1000 Imp/kWh             |
+|        +--------+-------+   +----+----------------+         |
+|        | SMA Sunny Home |   | Eltako DSZ12D-3x65A |         |
+|        | Manager 2.0    |   | Power Meter         |         |
+|        +----+------+----+   +----+-----------+----+         |
+|             |      |         (In)|           |(Out)         |
+|             |      |             |           |              |
+|  -----------+      +----+--------+           +------->--    |
+|  From                   |                    To House       |
+|  power grid             |(Out)                              |
+|                +--------+------------+                      |
+|                | Eltako DSZ12D-3x65A | Solar Power          |
+|                | Power Meter         | 1000 Imp/kWh         |
+|                +---+----+------------+                      |
+|                (S0)|    |(In)                               |
++--------------------+    |                                   |
+                          |                                   |
+                     +----+-----------------------------------+----+
+                     | Solar Inverter SMA Sunny Tripower 5000TL-20 |
+                     +--------------------------+------------------+
+                                                |
+                                     +----------+----------+
+                                     | Solar Cells on Roof |
+                                     +---------------------+
 ```
 ### Wiesemann & Theis COMServer 50210
 This device is a very old Ethernet connected digital I/O device. With a
